@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная - DJ Project 2{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">Добро пожаловать в DJ Project 2</h1>
+                <p class="lead mb-4">
+                    Современный веб-сайт, созданный с использованием Django и Bootstrap. 
+                    Демонстрируем лучшие практики веб-разработки и современный дизайн.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="{% url 'website:about' %}" class="btn btn-modern btn-lg">
+                        <i class="fas fa-info-circle me-2"></i>Узнать больше
+                    </a>
+                    <a href="{% url 'website:contact' %}" class="btn btn-outline-modern btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Связаться с нами
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-rocket icon-large float-animation"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="section-modern">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold">Наши возможности</h2>
+                <p class="lead text-muted">Что делает наш проект особенным</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-code icon-medium icon-primary"></i>
+                        </div>
+                        <h5 class="card-title">Современные технологии</h5>
+                        <p class="card-text text-muted">
+                            Используем Django, Bootstrap и другие современные инструменты 
+                            для создания качественных веб-приложений.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-mobile-alt icon-medium icon-success"></i>
+                        </div>
+                        <h5 class="card-title">Адаптивный дизайн</h5>
+                        <p class="card-text text-muted">
+                            Сайт отлично выглядит на всех устройствах - от мобильных 
+                            телефонов до больших мониторов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3">
+                            <i class="fas fa-rocket icon-medium icon-warning"></i>
+                        </div>
+                        <h5 class="card-title">Быстрая работа</h5>
+                        <p class="card-text text-muted">
+                            Оптимизированный код и современные технологии обеспечивают 
+                            высокую скорость загрузки и отзывчивость.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="section-modern bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fas fa-users icon-medium icon-primary"></i>
+                </div>
+                <h3 class="fw-bold">1000+</h3>
+                <p class="text-muted">Довольных клиентов</p>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fas fa-project-diagram icon-medium icon-success"></i>
+                </div>
+                <h3 class="fw-bold">500+</h3>
+                <p class="text-muted">Завершенных проектов</p>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fas fa-award icon-medium icon-warning"></i>
+                </div>
+                <h3 class="fw-bold">50+</h3>
+                <p class="text-muted">Наград и сертификатов</p>
+            </div>
+            <div class="col-md-3">
+                <div class="mb-3">
+                    <i class="fas fa-clock icon-medium icon-info"></i>
+                </div>
+                <h3 class="fw-bold">5+</h3>
+                <p class="text-muted">Лет опыта</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

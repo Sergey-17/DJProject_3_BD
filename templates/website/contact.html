@@ -1,0 +1,292 @@
+{% extends 'base.html' %}
+
+{% block title %}Контакты - DJ Project 2{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-info text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold">Контакты</h1>
+                <p class="lead">Свяжитесь с нами любым удобным способом</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-4">Напишите нам</h2>
+                <p class="text-muted mb-4">
+                    Есть вопросы или хотите обсудить проект? Заполните форму ниже, 
+                    и мы свяжемся с вами в ближайшее время.
+                </p>
+                
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">Имя *</label>
+                        <input type="text" class="form-control form-control-modern" id="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Фамилия *</label>
+                        <input type="text" class="form-control form-control-modern" id="lastName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" class="form-control form-control-modern" id="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" class="form-control form-control-modern" id="phone">
+                    </div>
+                    <div class="col-12">
+                        <label for="company" class="form-label">Компания</label>
+                        <input type="text" class="form-control form-control-modern" id="company">
+                    </div>
+                    <div class="col-12">
+                        <label for="service" class="form-label">Интересующая услуга</label>
+                        <select class="form-select form-control-modern" id="service">
+                            <option selected>Выберите услугу</option>
+                            <option value="web-dev">Веб-разработка</option>
+                            <option value="mobile">Мобильные приложения</option>
+                            <option value="design">UI/UX дизайн</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="consulting">Консультации</option>
+                            <option value="support">Поддержка</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="budget" class="form-label">Бюджет проекта</label>
+                        <select class="form-select form-control-modern" id="budget">
+                            <option selected>Выберите бюджет</option>
+                            <option value="50k-100k">50,000 - 100,000 ₽</option>
+                            <option value="100k-200k">100,000 - 200,000 ₽</option>
+                            <option value="200k-500k">200,000 - 500,000 ₽</option>
+                            <option value="500k+">500,000+ ₽</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Сообщение *</label>
+                        <textarea class="form-control form-control-modern" id="message" rows="5" 
+                                  placeholder="Расскажите подробнее о вашем проекте..." required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="privacy" required>
+                            <label class="form-check-label" for="privacy">
+                                Я согласен с <a href="#" class="text-primary">политикой конфиденциальности</a> *
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-modern btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i>Отправить сообщение
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="glass-card p-4">
+                    <h3 class="fw-bold mb-4">Контактная информация</h3>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <div class="contact-icon contact-icon-primary">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Адрес</h6>
+                                <p class="text-muted mb-0">
+                                    Москва, Россия<br>
+                                    ул. Примерная, д. 123<br>
+                                    офис 456
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <div class="contact-icon contact-icon-success">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Телефон</h6>
+                                <p class="text-muted mb-0">
+                                    <a href="tel:+79991234567" class="text-decoration-none">+7 (999) 123-45-67</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <div class="contact-icon contact-icon-warning">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Email</h6>
+                                <p class="text-muted mb-0">
+                                    <a href="mailto:info@djproject2.ru" class="text-decoration-none">info@djproject2.ru</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="flex-shrink-0">
+                                <div class="contact-icon contact-icon-info">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fw-bold mb-1">Время работы</h6>
+                                <p class="text-muted mb-0">
+                                    Пн-Пт: 9:00 - 18:00<br>
+                                    Сб-Вс: выходной
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6 class="fw-bold mb-3">Мы в социальных сетях</h6>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-info btn-sm" aria-label="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-danger btn-sm" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-sm" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h2 class="display-6 fw-bold">Как нас найти</h2>
+                <p class="lead text-muted">Мы находимся в центре Москвы</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="map-placeholder">
+                    <div class="text-center text-white">
+                        <i class="fas fa-map-marked-alt map-placeholder-icon"></i>
+                        <h4 class="mt-3">Интерактивная карта</h4>
+                        <p class="mb-0">Здесь будет размещена карта с нашим местоположением</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold">Часто задаваемые вопросы</h2>
+                <p class="lead text-muted">Ответы на популярные вопросы</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#faq1">
+                                Сколько времени занимает разработка проекта?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Время разработки зависит от сложности проекта. Простой сайт-визитка 
+                                может быть готов за 2-4 недели, а сложное веб-приложение - за 2-6 месяцев. 
+                                Мы всегда обсуждаем сроки на этапе планирования.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#faq2">
+                                Предоставляете ли вы техническую поддержку?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Да, мы предоставляем техническую поддержку для всех наших проектов. 
+                                Это включает в себя исправление ошибок, обновления, мониторинг работы 
+                                и консультации по использованию.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#faq3">
+                                Можно ли изменить проект в процессе разработки?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Конечно! Мы понимаем, что требования могут изменяться. Мы используем 
+                                гибкий подход к разработке и можем вносить изменения, согласовав их 
+                                с вами и скорректировав сроки и бюджет при необходимости.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+                                    data-bs-target="#faq4">
+                                Какие технологии вы используете?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Мы работаем с современными технологиями: Django/Python для backend, 
+                                React/JavaScript для frontend, PostgreSQL/MySQL для баз данных, 
+                                Docker для контейнеризации, и многими другими инструментами в зависимости от задач.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

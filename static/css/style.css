@@ -1,0 +1,661 @@
+/* DJ Project 2 - Modern Custom Styles */
+
+/* CSS Variables for consistent theming */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --warning-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --info-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --dark-gradient: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.2);
+    --border-radius: 20px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background: linear-gradient(135deg, #e3f2fd 0%, #f0f8ff 50%, #e8f5e8 100%);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" stop-color="%23ffffff" stop-opacity="0.1"/><stop offset="100%" stop-color="%23ffffff" stop-opacity="0"/></radialGradient></defs><circle cx="200" cy="200" r="300" fill="url(%23a)"/><circle cx="800" cy="300" r="200" fill="url(%23a)"/><circle cx="400" cy="700" r="250" fill="url(%23a)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Modern Cards */
+.card-hover {
+    transition: var(--transition);
+    border: none;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card-hover:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Glass Effect Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+}
+
+/* Footer */
+.footer {
+    background: var(--dark-gradient);
+    color: white;
+    padding: 60px 0 30px;
+    position: relative;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    transition: var(--transition);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.navbar-brand img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.navbar-brand:hover img {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+    color: #2d3748 !important;
+}
+
+.nav-link:hover {
+    color: #667eea !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-gradient);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #667eea !important;
+    font-weight: 600;
+}
+
+/* Modern Buttons */
+.btn-modern {
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-modern:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+.btn-outline-modern {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                var(--primary-gradient) border-box;
+    border-radius: 50px;
+    padding: 10px 28px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline-modern:hover {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* Modern Icons */
+.icon-large {
+    font-size: 200px;
+    opacity: 0.2;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+.icon-medium {
+    font-size: 3rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-small {
+    font-size: 2rem;
+}
+
+/* Modern Icon Colors with Gradients */
+.icon-primary {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-success {
+    background: var(--success-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-warning {
+    background: var(--warning-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-info {
+    background: var(--info-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-danger {
+    background: var(--secondary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.icon-secondary {
+    background: var(--dark-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Modern Value Icons */
+.value-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.value-icon:hover {
+    transform: translateY(-5px) rotate(5deg);
+    box-shadow: var(--shadow-hover);
+}
+
+.value-icon-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.value-icon-success {
+    background: var(--success-gradient);
+    color: white;
+}
+
+.value-icon-warning {
+    background: var(--warning-gradient);
+    color: white;
+}
+
+.value-icon-info {
+    background: var(--info-gradient);
+    color: white;
+}
+
+/* Modern Service Icons */
+.service-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: var(--transition);
+}
+
+.service-icon:hover::before {
+    left: 100%;
+}
+
+.service-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-icon-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.service-icon-success {
+    background: var(--success-gradient);
+    color: white;
+}
+
+.service-icon-warning {
+    background: var(--warning-gradient);
+    color: white;
+}
+
+.service-icon-info {
+    background: var(--info-gradient);
+    color: white;
+}
+
+.service-icon-danger {
+    background: var(--secondary-gradient);
+    color: white;
+}
+
+.service-icon-secondary {
+    background: var(--dark-gradient);
+    color: white;
+}
+
+/* Modern Team Icons */
+.team-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+.team-icon::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 32px;
+    background: var(--primary-gradient);
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.team-icon:hover::after {
+    opacity: 1;
+}
+
+.team-icon:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-hover);
+}
+
+.team-icon-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.team-icon-success {
+    background: var(--success-gradient);
+    color: white;
+}
+
+.team-icon-warning {
+    background: var(--warning-gradient);
+    color: white;
+}
+
+/* Modern Process Icons */
+.process-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+    position: relative;
+}
+
+.process-icon::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 28px;
+    background: var(--primary-gradient);
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.process-icon:hover::before {
+    opacity: 1;
+}
+
+.process-icon:hover {
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.process-icon-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.process-icon-success {
+    background: var(--success-gradient);
+    color: white;
+}
+
+.process-icon-warning {
+    background: var(--warning-gradient);
+    color: white;
+}
+
+.process-icon-info {
+    background: var(--info-gradient);
+    color: white;
+}
+
+/* Modern Contact Icons */
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-icon:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.contact-icon-primary {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.contact-icon-success {
+    background: var(--success-gradient);
+    color: white;
+}
+
+.contact-icon-warning {
+    background: var(--warning-gradient);
+    color: white;
+}
+
+.contact-icon-info {
+    background: var(--info-gradient);
+    color: white;
+}
+
+/* Modern Map Placeholder */
+.map-placeholder {
+    height: 400px;
+    background: var(--dark-gradient);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.map-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.map-placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.3;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Modern Sections */
+.section-modern {
+    padding: 80px 0;
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin: 20px 0;
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.section-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent);
+}
+
+/* Modern Badges */
+.badge-modern {
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Modern Form Elements */
+.form-control-modern {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: var(--transition);
+    box-shadow: var(--shadow-soft);
+}
+
+.form-control-modern:focus {
+    border-color: transparent;
+    background: linear-gradient(white, white) padding-box,
+                var(--primary-gradient) border-box;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Modern Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.pulse-animation {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Page Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+    
+    .icon-large {
+        font-size: 120px;
+    }
+    
+    .icon-medium {
+        font-size: 2rem;
+    }
+    
+    .section-modern {
+        padding: 60px 0;
+        margin: 10px 0;
+        border-radius: 20px;
+    }
+    
+    .value-icon,
+    .service-icon,
+    .team-icon,
+    .process-icon {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+
+{% block title %}Услуги - DJ Project 2{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-success text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold">Наши услуги</h1>
+                <p class="lead">Полный спектр веб-разработки и дизайна</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Content -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold">Что мы предлагаем</h2>
+                <p class="lead text-muted">Комплексные решения для вашего бизнеса</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Web Development -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-primary">
+                                <i class="fas fa-code icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">Веб-разработка</h5>
+                        <p class="card-text text-muted text-center">
+                            Создание современных веб-приложений с использованием Django, 
+                            React и других передовых технологий.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Django/Python</li>
+                            <li><i class="fas fa-check text-success me-2"></i>React/JavaScript</li>
+                            <li><i class="fas fa-check text-success me-2"></i>API разработка</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Базы данных</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 50,000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Apps -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-success">
+                                <i class="fas fa-mobile-alt icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">Мобильные приложения</h5>
+                        <p class="card-text text-muted text-center">
+                            Разработка нативных и кроссплатформенных мобильных приложений 
+                            для iOS и Android.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>React Native</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Flutter</li>
+                            <li><i class="fas fa-check text-success me-2"></i>iOS/Android</li>
+                            <li><i class="fas fa-check text-success me-2"></i>UI/UX дизайн</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 80,000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- UI/UX Design -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-warning">
+                                <i class="fas fa-paint-brush icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">UI/UX дизайн</h5>
+                        <p class="card-text text-muted text-center">
+                            Создание интуитивных и красивых пользовательских интерфейсов, 
+                            ориентированных на пользователя.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Прототипирование</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Визуальный дизайн</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Пользовательские тесты</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Адаптивный дизайн</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 30,000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- E-commerce -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-info">
+                                <i class="fas fa-shopping-cart icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">E-commerce</h5>
+                        <p class="card-text text-muted text-center">
+                            Создание интернет-магазинов с полным функционалом: 
+                            корзина, оплата, управление заказами.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Каталог товаров</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Корзина покупок</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Система оплаты</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Админ-панель</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 100,000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Consulting -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-danger">
+                                <i class="fas fa-lightbulb icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">Консультации</h5>
+                        <p class="card-text text-muted text-center">
+                            Экспертные консультации по выбору технологий, 
+                            архитектуре и стратегии развития проекта.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Техническая экспертиза</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Архитектура системы</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Оптимизация производительности</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Безопасность</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 5,000 ₽/час</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Maintenance -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card h-100 card-hover border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <div class="service-icon service-icon-secondary">
+                                <i class="fas fa-tools icon-small"></i>
+                            </div>
+                        </div>
+                        <h5 class="card-title text-center fw-bold">Поддержка</h5>
+                        <p class="card-text text-muted text-center">
+                            Техническая поддержка и обслуживание ваших веб-проектов: 
+                            обновления, исправления, мониторинг.
+                        </p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Техническая поддержка</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Обновления системы</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Мониторинг работы</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Резервное копирование</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <span class="badge badge-modern fs-6">От 15,000 ₽/мес</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold">Наш процесс работы</h2>
+                <p class="lead text-muted">Как мы создаем ваши проекты</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="process-icon process-icon-primary">
+                        <span class="fw-bold fs-4">1</span>
+                    </div>
+                    <h5 class="fw-bold">Анализ</h5>
+                    <p class="text-muted">Изучаем ваши требования и цели проекта</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="process-icon process-icon-success">
+                        <span class="fw-bold fs-4">2</span>
+                    </div>
+                    <h5 class="fw-bold">Планирование</h5>
+                    <p class="text-muted">Создаем техническое задание и план работ</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="process-icon process-icon-warning">
+                        <span class="fw-bold fs-4">3</span>
+                    </div>
+                    <h5 class="fw-bold">Разработка</h5>
+                    <p class="text-muted">Создаем и тестируем ваш проект</p>
+                </div>
+            </div>
+            
+            <div class="col-md-3">
+                <div class="text-center">
+                    <div class="process-icon process-icon-info">
+                        <span class="fw-bold fs-4">4</span>
+                    </div>
+                    <h5 class="fw-bold">Запуск</h5>
+                    <p class="text-muted">Разворачиваем проект и обеспечиваем поддержку</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12">
+                <h2 class="display-6 fw-bold mb-4">Готовы начать проект?</h2>
+                <p class="lead mb-4">
+                    Свяжитесь с нами для обсуждения ваших потребностей и получения 
+                    персонального предложения.
+                </p>
+                <a href="{% url 'website:contact' %}" class="btn btn-modern btn-lg">
+                    <i class="fas fa-envelope me-2"></i>Связаться с нами
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

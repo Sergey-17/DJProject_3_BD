@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Новостная страница{% endblock %}
+
+{% block content %}
+<h1>Новостная страница</h1>
+{% for new in news %}
+    <div class="news-item">
+        <h3>{{new.title}}</h3>
+        <div class="news-meta">
+            <p><strong>Автор:</strong> {{new.author_publication}}</p>
+            <p><strong>Дата публикации:</strong> {{new.pub_date|date:"d.m.Y H:i"}}</p>
+        </div>
+        <p class="short-desc"><strong>Краткое описание:', </strong>{{new.short_description}}</p>
+        <div class="news-text">
+            {{new.text}}
+        </div>
+        <hr>
+    </div>
+{% endfor %}
+{% endblock %}
